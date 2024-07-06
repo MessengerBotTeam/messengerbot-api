@@ -9,5 +9,6 @@ RUN apt update && \
     && pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 4371
+EXPOSE 8000
 
 CMD [ "python3", "-m" , "sanic", "app:app", "--fast", "--access-logs", "--motd", "--noisy-exceptions", "-H", "0.0.0.0"]

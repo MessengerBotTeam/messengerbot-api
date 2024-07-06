@@ -4,7 +4,7 @@ services:
   messengerbot-api:
     image: messengerbot-api
     ports:
-      - "127.0.0.1:4371:4371"
+      - "127.0.0.1:4371:8000"
     restart: always
 
 networks:

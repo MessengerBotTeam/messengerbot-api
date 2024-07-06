@@ -1,3 +1,5 @@
+FROM python:3.12-slim
+
 FROM sanicframework/sanic:3.8-latest
 
 WORKDIR /messengerbot-api

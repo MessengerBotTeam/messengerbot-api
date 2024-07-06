@@ -1,12 +1,12 @@
 FROM python:3.12-slim
 
-FROM sanicframework/sanic:3.8-latest
-
 WORKDIR /messengerbot-api
 
 COPY . .
 
-RUN pip install -r requirements.txt
+RUN apt update && \
+    apt-get install git build-essential libffi-dev libssl-dev openssl --no-install-recommends -y \
+    && pip install --no-cache-dir -r requirements.txt
 
 EXPOSE 4371
 

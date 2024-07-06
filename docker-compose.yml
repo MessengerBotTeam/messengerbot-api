@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  messengerbot-api:
+    image: messengerbot-api
+    ports:
+      - "127.0.0.1:4371:4371"
+    restart: always
+
+networks:
+  default:
+    driver: bridge
